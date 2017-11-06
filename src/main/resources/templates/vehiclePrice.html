@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>RentalCars</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <link type="text/css" href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+        <a href="/">
+          <button type="button" class="btn btn-default btn-back">
+            <span class="glyphicon glyphicon-arrow-left">Back</span>
+          </button>
+        </a>
+      </div>
+      <div class="col-md-4 col-md-offset-3">
+        <h2 class="text-center"> Vehicles by Price </h2>
+      </div>
+    </div>
+  </div>
+  <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th><b>#</b></th>
+          <th><b>Name</b></th>
+          <th><b>Price</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="vehicle : ${vehiclePrices}">
+            <td th:text="${vehiclePrices.indexOf(vehicle)+1}"></td>
+            <td th:text="${vehicle.name}"></td>
+            <td th:text="${vehicle.price}"></td>
+        </tr>
+      </tbody>
+  </table>
+</body>
+</html>

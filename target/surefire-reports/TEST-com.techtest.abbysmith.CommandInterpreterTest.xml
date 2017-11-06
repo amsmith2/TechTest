@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="com.techtest.abbysmith.CommandInterpreterTest" time="0.22" errors="0" skipped="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.techtest.abbysmith.CommandInterpreterTest" time="0.343" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib"/>
@@ -22,8 +22,7 @@
     <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
     <property name="java.io.tmpdir" value="/var/folders/m0/dw7wx1gs58sbf_kdlghcyfcr0000gn/T/"/>
-    <property name="line.separator" value="
-"/>
+    <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
     <property name="classworlds.conf" value="/opt/apache-maven/bin/m2.conf"/>
@@ -64,9 +63,9 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.techtest.abbysmith.CommandInterpreterTest" name="testGetSpecs" time="0.001"/>
-  <testcase classname="com.techtest.abbysmith.CommandInterpreterTest" name="testSortHighestSupplier" time="0.004"/>
-  <testcase classname="com.techtest.abbysmith.CommandInterpreterTest" name="sortBySum" time="0.047"/>
-  <testcase classname="com.techtest.abbysmith.CommandInterpreterTest" name="testParseJsonVehicles" time="0.167"/>
-  <testcase classname="com.techtest.abbysmith.CommandInterpreterTest" name="testSortByPrice" time="0.001"/>
+  <testcase name="testGetSpecs" classname="com.techtest.abbysmith.CommandInterpreterTest" time="0"/>
+  <testcase name="testSortHighestSupplier" classname="com.techtest.abbysmith.CommandInterpreterTest" time="0"/>
+  <testcase name="sortBySum" classname="com.techtest.abbysmith.CommandInterpreterTest" time="0.057"/>
+  <testcase name="testParseJsonVehicles" classname="com.techtest.abbysmith.CommandInterpreterTest" time="0.285"/>
+  <testcase name="testSortByPrice" classname="com.techtest.abbysmith.CommandInterpreterTest" time="0.001"/>
 </testsuite>

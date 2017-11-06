@@ -163,4 +163,64 @@ public class CommandInterpreter {
 		return result;
 	}
 
+	/**
+	 * Returns a list of Vehicle objects ordered by price in descending order.
+	 *
+	 * @param	vehicles		the list of Vehicle objects to be sorted
+	 * @return	vehicles		the ordered list of Vehicle objects
+	 */
+	public List<Vehicle> vehiclesByPrice(List<Vehicle> vehicles) {
+		vehicles.sort((v1, v2) -> v1.price.compareTo(v2.price));
+		return vehicles;
+	}
+
+	/**
+	 * Returns a list of Vehicle objects with the highest rated supplier per car
+	 * type.
+	 *
+	 * @param	vehicles		the list of Vehicle objects to be sorted
+	 * @return	resultVehicles		the filtered and ordered list of Vehicle objects
+	 */
+	public List<Vehicle> vehiclesByHighestSupp(List<Vehicle> vehicles) {
+		List<Vehicle> resultVehicles = new ArrayList<Vehicle>();
+
+		Collections.sort(vehicles, new Comparator<Vehicle>() {
+		    @Override
+		    public int compare(Vehicle v1, Vehicle v2) {
+		    		//Sort into car types
+		    		int value1 = v1.carType.compareTo(v2.carType);
+		    		if (value1 == 0) {
+		    			//Sort by rating within car type
+		    			int value2 = v2.rating.compareTo(v1.rating);
+		    			return value2;
+		    		}
+		    		else {
+		    			return value1;
+		    		}
+		    }
+		});
+
+		String previousType = "";
+		for (Vehicle v : vehicles) {
+			String currentType = v.carType;
+			if (currentType != previousType) {
+				resultVehicles.add(v);
+			}
+			previousType = v.carType;
+		}
+		return resultVehicles;
+	}
+
+	/**
+	 * Returns a list of Vehicle objects ordered by their total score in
+	 * descending order.
+	 *
+	 * @param	vehicles		the list of Vehicle objects to be sorted
+	 * @return	vehicles		the ordered list of Vehicle objects
+	 */
+	public List<Vehicle> vehiclesByScore(List<Vehicle> vehicles) {
+		vehicles.sort((v1, v2) -> v2.sumScore.compareTo(v1.sumScore));
+		return vehicles;
+	}
+
 }
